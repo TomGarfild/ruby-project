@@ -1,0 +1,10 @@
+<h2>Students with most popular names(men)</h1>
+<ul>
+    <%@students.each do |student, _| %>
+    <li>
+        <%= "#{student}" %>
+    </li>
+    <% end %>
+</ul>
+
+<%= link_to "Back to list", students_path %>

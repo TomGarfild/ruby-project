@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab7</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+  
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Lab7</a>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Year with most men%", "/year_with_most/men_percentage"  %></li>
+            <li><%= link_to "Women students most popular age", "/women_students/most_popular_age"  %></li>
+            <li><%= link_to "Women most popular names", "/women_students/most_popular_names"  %></li>
+            <li><%= link_to "Men most popular names", "/men_students/most_popular_names"  %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>

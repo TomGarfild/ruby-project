@@ -1,0 +1,14 @@
+<%if @percentage == 0%>
+  <h4>Every year has 0 men percentage</h4>
+<% else %>
+    <h2>Years with most men percentage <%= @percentage %></h1>
+    <ul>
+        <%@years_with_percentage.each do |y| %>
+        <li>
+            <%= "#{y}" %>
+        </li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= link_to "Back to list", students_path %>
